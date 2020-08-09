@@ -21,6 +21,12 @@ to the server which returns the number of “stars” for each repository in one
 * Once you have Python + Pip + Pipenv
     * `python -m pipenv install --dev` will install both the CLI and test development dependencies
     * `python -m pipenv shell` will put your terminal into a Python subshell with your dependencies for quick development
+* Tests & static code analysis:
+    * While inside pipenv shell:
+        * Run unit tests: `coverage run -m unittest`
+        * View coverage report: `coverage report -m stargazers/stargazers.py stargazers/utilities.py`
+        * Run pylint: `pylint stargazers/`
+        * Run pycodestyle: `pycodestyle stargazers/`
 
 ## Notes
 * GitHub API is rate limited - unauthorized requests are capped at ~60 per hour
